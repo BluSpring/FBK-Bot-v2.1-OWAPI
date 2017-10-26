@@ -1,0 +1,12 @@
+{
+    "id": 9,
+    "name": "Route 66",
+    "location": "Route 66, United States of America",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/9",
+    "mode": {
+        "id": 3,
+        "name": "Escort"
+    },
+    "stages": [],
+    "event": null
+}

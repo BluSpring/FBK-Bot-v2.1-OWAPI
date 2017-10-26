@@ -1,0 +1,57 @@
+{
+    "id": 4,
+    "name": "Genji",
+    "description": "Genji flings precise and deadly Shuriken at his targets, and uses his technologically-advanced katana to deflect projectiles or deliver a Swift Strike that cuts down enemies.",
+    "health": 200,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Genji Shimada",
+    "age": 35,
+    "height": null,
+    "affiliation": "Shimada Clan",
+    "base_of_operations": "Shambali Monastery, Nepal",
+    "difficulty": 3,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/4",
+    "role": {
+        "id": 1,
+        "name": "offense"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 17,
+            "name": "Shuriken",
+            "description": "Genji looses three deadly throwing stars in quick succession. Alternatively, he can throw three shuriken in a wider spread.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/17"
+        },
+        {
+            "id": 18,
+            "name": "Swift Strike",
+            "description": "Genji darts forward, slashing with his katana and passing through foes in his path. If Genji eliminates a target, he can instantly use this ability again.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/18"
+        },
+        {
+            "id": 19,
+            "name": "Deflect",
+            "description": "With lightning-quick swipes of his sword, Genji reflects any oncoming projectiles and can send them rebounding towards his enemies.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/19"
+        },
+        {
+            "id": 20,
+            "name": "Cyber-Agility",
+            "description": "Thanks to his cybernetic abilities, Genji can climb walls and perform jumps in mid-air.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/20"
+        },
+        {
+            "id": 21,
+            "name": "Dragonblade",
+            "description": "Genji brandishes his katana for a brief period of time. Until he sheathes his sword, Genji can deliver killing strikes to any targets within his reach.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/21"
+        }
+    ]
+}

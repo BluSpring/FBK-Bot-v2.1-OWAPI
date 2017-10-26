@@ -1,0 +1,55 @@
+{
+    "id": 19,
+    "name": "Widowmaker",
+    "description": "Widowmaker equips herself with whatever it takes to eliminate her targets, including mines that dispense poisonous gas, a visor that grants her squad infra-sight, and a powerful sniper rifle that can fire in fully-automatic mode.",
+    "health": 200,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Am\u00e9lie Lacroix",
+    "age": 33,
+    "height": 175,
+    "affiliation": "Talon",
+    "base_of_operations": "Annecy, France",
+    "difficulty": 2,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/19",
+    "role": {
+        "id": 2,
+        "name": "defense"
+    },
+    "sub_roles": [
+        {
+            "id": 3,
+            "name": "sniper"
+        }
+    ],
+    "abilities": [
+        {
+            "id": 88,
+            "name": "Widow's Kiss",
+            "description": "Widowmaker\u2019s versatile sniper rifle is ideal for scope-aimed shots at distant targets. Should targets close to medium range, the rifle can also be fired in fully-automatic mode.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/88"
+        },
+        {
+            "id": 89,
+            "name": "Grappling Hook",
+            "description": "Widowmaker launches a grappling hook towards the location she\u2019s aiming at \u2013 when the hook connects with a scalable surface, she\u2019s quickly drawn towards it, allowing her to expand her view of the battlefield and evade or flank targets.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/89"
+        },
+        {
+            "id": 90,
+            "name": "Venom Mine",
+            "description": "Widowmaker adheres a swiftly-arming venom mine to nearly any surface. When a target wanders within range of the mine\u2019s motion trigger, it explodes, delivering poison gas to any enemies in the vicinity.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/90"
+        },
+        {
+            "id": 91,
+            "name": "Infra-Sight",
+            "description": "Widowmaker\u2019s recon visor allows her to see the heat signatures of her targets through walls and objects for a moderate amount of time. This enhanced vision is shared with her allies.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/91"
+        }
+    ]
+}

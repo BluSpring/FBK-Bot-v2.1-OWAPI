@@ -1,0 +1,57 @@
+{
+    "id": 21,
+    "name": "Zarya",
+    "description": "Deploying powerful personal barriers that convert incoming damage into energy for her massive Particle Cannon, Zarya is an invaluable asset on the front lines of any battle.",
+    "health": 200,
+    "armour": 0,
+    "shield": 200,
+    "real_name": "Aleksandra Zaryanova",
+    "age": 28,
+    "height": 195,
+    "affiliation": "Russian Defense Forces",
+    "base_of_operations": "Krasnoyarsk Front, Russia",
+    "difficulty": 3,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/21",
+    "role": {
+        "id": 3,
+        "name": "tank"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 96,
+            "name": "Particle Cannon",
+            "description": "Zarya\u2019s mighty Particle Cannon unleashes a short-range beam of destructive energy. Alternatively, Zarya can lob an explosive charge to strike multiple opponents.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/96"
+        },
+        {
+            "id": 97,
+            "name": "Particle Barrier",
+            "description": "The Particle Cannon can emit a personal barrier that shields Zarya against incoming attacks, redirecting their energy to enhance her weapon\u2019s damage and the width of its beam.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/97"
+        },
+        {
+            "id": 98,
+            "name": "Projected Barrier",
+            "description": "Zarya surrounds one of her teammates with an energy barrier that simultaneously absorbs fire and boosts the power of her Particle Cannon.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/98"
+        },
+        {
+            "id": 99,
+            "name": "Energy",
+            "description": "Damage blocked increases Particle Cannon damage.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/99"
+        },
+        {
+            "id": 100,
+            "name": "Graviton Surge",
+            "description": "Zarya launches a gravity bomb that draws in enemy combatants and deals damage while they\u2019re trapped.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/100"
+        }
+    ]
+}

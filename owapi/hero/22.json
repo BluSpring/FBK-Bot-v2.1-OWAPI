@@ -1,0 +1,55 @@
+{
+    "id": 22,
+    "name": "Zenyatta",
+    "description": "Zenyatta calls upon orbs of harmony and discord to heal his teammates and weaken his opponents, all while pursuing a transcendent state of immunity to damage.",
+    "health": 50,
+    "armour": 0,
+    "shield": 150,
+    "real_name": "Tekhartha Zenyatta",
+    "age": 20,
+    "height": 172,
+    "affiliation": "The Shambali",
+    "base_of_operations": "Shambali Monastery, Nepal",
+    "difficulty": 3,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/22",
+    "role": {
+        "id": 4,
+        "name": "support"
+    },
+    "sub_roles": [
+        {
+            "id": 2,
+            "name": "healer"
+        }
+    ],
+    "abilities": [
+        {
+            "id": 101,
+            "name": "Orb of Destruction",
+            "description": "Zenyatta projects his destructive energy orbs either individually, or in a rapid-fire volley after a few seconds spent gathering power.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/101"
+        },
+        {
+            "id": 102,
+            "name": "Orb of Harmony",
+            "description": "Zenyatta casts an orb over the shoulder of a targeted ally. So long as Zenyatta maintains line of sight, the orb slowly restores health to his ally. Only one ally can receive the orb's benefit at a time.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/102"
+        },
+        {
+            "id": 103,
+            "name": "Orb of Discord",
+            "description": "Attaching the orb of discord to an opponent amplifies the amount of damage they receive for as long as Zenyatta maintains line of sight. Only one opponent can suffer the orb's effects at a time.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/103"
+        },
+        {
+            "id": 104,
+            "name": "Transcendence",
+            "description": "Zenyatta enters a state of heightened existence for a short period of time. While transcendent, Zenyatta cannot use abilities or weapons, but is immune to damage, moves twice as fast, and automatically restores his health and that of nearby allies.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/104"
+        }
+    ]
+}

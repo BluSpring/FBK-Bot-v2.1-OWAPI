@@ -1,0 +1,12 @@
+{
+    "id": 13,
+    "name": "Volskaya Industries",
+    "location": "Russia",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/13",
+    "mode": {
+        "id": 1,
+        "name": "Assault"
+    },
+    "stages": [],
+    "event": null
+}

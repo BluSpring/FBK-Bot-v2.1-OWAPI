@@ -1,0 +1,12 @@
+{
+    "id": 10,
+    "name": "Numbani",
+    "location": "Nigeria",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/10",
+    "mode": {
+        "id": 4,
+        "name": "Hybrid"
+    },
+    "stages": [],
+    "event": null
+}

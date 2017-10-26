@@ -1,0 +1,62 @@
+{
+    "id": 10,
+    "name": "Mercy",
+    "description": "Mercy\u2019s Valkyrie Suit helps keep her close to teammates like a guardian angel; healing, resurrecting or strengthening them with the beams emanating from her Caduceus Staff.",
+    "health": 200,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Angela Ziegler",
+    "age": 37,
+    "height": 170,
+    "affiliation": "Overwatch",
+    "base_of_operations": "Z\u00fcrich, Switzerland",
+    "difficulty": 1,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/10",
+    "role": {
+        "id": 4,
+        "name": "support"
+    },
+    "sub_roles": [
+        {
+            "id": 2,
+            "name": "healer"
+        }
+    ],
+    "abilities": [
+        {
+            "id": 45,
+            "name": "Caduceus Staff",
+            "description": "Mercy engages one of two beams that connect to an ally. By maintaining the beams, she can either restore that ally's health or increase the amount of damage they deal.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/45"
+        },
+        {
+            "id": 46,
+            "name": "Caduceus Blaster",
+            "description": "Mercy shoots a round from her sidearm. It's best reserved for emergency personal defense.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/46"
+        },
+        {
+            "id": 47,
+            "name": "Guardian Angel",
+            "description": "Mercy flies towards a targeted ally, allowing her to reach them quickly and provide assistance in crucial moments.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/47"
+        },
+        {
+            "id": 48,
+            "name": "Angelic Descent",
+            "description": "Propelled by her Valkyrie suit, Mercy slows the speed of her descent from great heights.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/48"
+        },
+        {
+            "id": 49,
+            "name": "Resurrect",
+            "description": "Mercy radiates restorative power, bringing nearby dead allies back into the fight with full health.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/49"
+        }
+    ]
+}

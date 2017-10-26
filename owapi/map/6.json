@@ -1,0 +1,25 @@
+{
+    "id": 6,
+    "name": "Ilios",
+    "location": "Greece",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/6",
+    "mode": {
+        "id": 2,
+        "name": "Control"
+    },
+    "stages": [
+        {
+            "id": 1,
+            "name": "Lighthouse"
+        },
+        {
+            "id": 2,
+            "name": "Well"
+        },
+        {
+            "id": 3,
+            "name": "Ruins"
+        }
+    ],
+    "event": null
+}

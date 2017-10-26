@@ -1,0 +1,12 @@
+{
+    "id": 15,
+    "name": "Ecopoint: Antarctica",
+    "location": "Antarctica",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/15",
+    "mode": {
+        "id": 6,
+        "name": "Arena"
+    },
+    "stages": [],
+    "event": null
+}

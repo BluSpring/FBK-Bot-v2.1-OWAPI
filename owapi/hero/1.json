@@ -1,0 +1,58 @@
+{
+    "id": 1,
+    "name": "Ana",
+    "description": "Ana\u2019s versatile arsenal allows her to affect heroes all over the battlefield. Her Biotic Rifle rounds and Biotic Grenades heal allies and damage or impair enemies; her sidearm tranquilizes key targets, and Nano Boost gives one of her comrades a considerable increase in power.",
+    "health": 200,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Ana Amari",
+    "age": 60,
+    "height": null,
+    "affiliation": "Overwatch",
+    "base_of_operations": "Cairo, Egypt",
+    "difficulty": 3,
+	"role": {
+		"id": 4,
+		"name": "support"
+	},
+	"sub_roles": [
+        {
+            "id": 2,
+            "name": "healer"
+        },
+        {
+            "id": 3,
+            "name": "sniper"
+        }
+    ],
+	"abilities": [
+        {
+            "id": 1,
+            "name": "Biotic Rifle",
+            "description": "Ana\u2019s rifle shoots darts that can restore health to her allies or deal ongoing damage to her enemies. She can use the rifle\u2019s scope to zoom in on targets and make highly accurate shots.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/1"
+        },
+        {
+            "id": 2,
+            "name": "Sleep Dart",
+            "description": "Ana fires a dart from her sidearm, rendering an enemy unconscious (though any damage will rouse them).",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/2"
+        },
+        {
+            "id": 3,
+            "name": "Biotic Grenade",
+            "description": "Ana tosses a biotic bomb that deals damage to enemies and heals allies in a small area of effect. Affected allies briefly receive increased healing from all sources, while enemies caught in the blast cannot be healed for a few moments.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/3"
+        },
+        {
+            "id": 4,
+            "name": "Nano Boost",
+            "description": "After Ana hits one of her allies with a combat boost, they temporarily move faster, deal more damage, and take less damage from enemies\u2019 attacks.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/4"
+        }
+    ]
+}

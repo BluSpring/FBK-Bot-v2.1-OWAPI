@@ -1,0 +1,69 @@
+{
+    "id": 17,
+    "name": "Torbj\u00f6rn",
+    "description": "Torbj\u00f6rn\u2019s extensive arsenal includes a rivet gun and hammer, as well as a personal forge that he can use to build upgradeable turrets and dole out protective armor packs.",
+    "health": 200,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Torbj\u00f6rn Lindholm",
+    "age": 57,
+    "height": 140,
+    "affiliation": "Overwatch",
+    "base_of_operations": "Gothenburg, Sweden",
+    "difficulty": 2,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/17",
+    "role": {
+        "id": 2,
+        "name": "defense"
+    },
+    "sub_roles": [
+        {
+            "id": 1,
+            "name": "builder"
+        }
+    ],
+    "abilities": [
+        {
+            "id": 78,
+            "name": "Rivet Gun",
+            "description": "Torbj\u00f6rn fires rivets at long range, or ejects molten metal from his gun in a short, close-range burst.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/78"
+        },
+        {
+            "id": 79,
+            "name": "Forge Hammer",
+            "description": "Torbj\u00f6rn uses his multipurpose hammer to build, upgrade and repair turrets. In a pinch, it can also be swung as a weapon.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/79"
+        },
+        {
+            "id": 80,
+            "name": "Build Turret",
+            "description": "Torbj\u00f6rn constructs an enemy-tracking autocannon. He can use his Forge Hammer to repair or upgrade it, increasing its health and adding a second cannon barrel and a rocket launcher.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/80"
+        },
+        {
+            "id": 81,
+            "name": "Scrap Collector",
+            "description": "Collect scrap to gain resources.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/81"
+        },
+        {
+            "id": 82,
+            "name": "Armor Pack",
+            "description": "Torbj\u00f6rn deploys an armor upgrade; either he or his allies can pick it up to absorb some damage.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/82"
+        },
+        {
+            "id": 83,
+            "name": "Molten Core",
+            "description": "After overheating his personal forge, Torbj\u00f6rn gains a significant amount of armor. He also attacks (and builds and repairs turrets) far faster than normal.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/83"
+        }
+    ]
+}

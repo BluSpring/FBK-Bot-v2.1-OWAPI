@@ -1,0 +1,50 @@
+{
+    "id": 14,
+    "name": "Roadhog",
+    "description": "Roadhog uses his signature Chain Hook to pull his enemies close before shredding them with blasts from his Scrap Gun. He\u2019s hardy enough to withstand tremendous damage, and can recover his health with a short breather.",
+    "health": 600,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Mako Rutledge",
+    "age": 48,
+    "height": 220,
+    "affiliation": "Australian Liberation Front",
+    "base_of_operations": "Junkertown, Australia",
+    "difficulty": 1,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/14",
+    "role": {
+        "id": 3,
+        "name": "tank"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 65,
+            "name": "Scrap Gun",
+            "description": "Roadhog's Scrap Gun fires short-range blasts of shrapnel with a wide spread. Alternatively, it can launch a shrapnel ball that detonates farther away, scattering metal fragments from the point of impact.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/65"
+        },
+        {
+            "id": 66,
+            "name": "Take A Breather",
+            "description": "Roadhog restores a chunk of his health over a brief period of time.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/66"
+        },
+        {
+            "id": 67,
+            "name": "Chain Hook",
+            "description": "Roadhog hurls his chain at a target; if it catches, he yanks them into close range.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/67"
+        },
+        {
+            "id": 68,
+            "name": "Whole Hog",
+            "description": "After cramming a top-loader onto his Scrap Gun, Roadhog pours in ammo. For a short time, he can crank out a stream of shrapnel that knocks back enemies.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/68"
+        }
+    ]
+}

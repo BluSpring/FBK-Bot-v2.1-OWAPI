@@ -1,0 +1,57 @@
+{
+    "id": 6,
+    "name": "Junkrat",
+    "description": "Junkrat\u2019s area-denying armaments include a Frag Launcher that lobs bouncing grenades, Concussion Mines that send enemies flying, and Steel Traps that stop foes dead in their tracks.",
+    "health": 200,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Jamison Fawkes",
+    "age": 25,
+    "height": 195,
+    "affiliation": "Junkers",
+    "base_of_operations": "Junkertown, Australia",
+    "difficulty": 2,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/6",
+    "role": {
+        "id": 2,
+        "name": "defense"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 27,
+            "name": "Frag Launcher",
+            "description": "Junkrat's Frag Launcher lobs grenades a significant distance. They bounce to reach their destination, and blow up when they strike an enemy.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/27"
+        },
+        {
+            "id": 28,
+            "name": "Concussion Mine",
+            "description": "After placing one of his homemade Concussion Mines, Junkrat can trigger it to damage enemies and send them flying... or propel himself through the air.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/28"
+        },
+        {
+            "id": 29,
+            "name": "Steel Trap",
+            "description": "Junkrat tosses out a giant, metal-toothed trap. Should an enemy wander too close to the trap, it clamps on, injuring and immobilizing them.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/29"
+        },
+        {
+            "id": 30,
+            "name": "Total Mayhem",
+            "description": "Junkrat's deranged sense of humor persists past his death. If killed, he drops several live grenades.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/30"
+        },
+        {
+            "id": 31,
+            "name": "RIP-Tire",
+            "description": "Junkrat revs up a motorized tire bomb and sends it rolling across the battlefield, climbing over walls and obstacles. He can remotely detonate the RIP-Tire to deal serious damage to enemies caught within the blast, or just wait for it to explode on its own.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/31"
+        }
+    ]
+}

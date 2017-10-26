@@ -1,0 +1,25 @@
+{
+    "id": 11,
+    "name": "Nepal",
+    "location": "Nepal",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/11",
+    "mode": {
+        "id": 2,
+        "name": "Control"
+    },
+    "stages": [
+        {
+            "id": 7,
+            "name": "Village"
+        },
+        {
+            "id": 8,
+            "name": "Shrine"
+        },
+        {
+            "id": 9,
+            "name": "Sanctum"
+        }
+    ],
+    "event": null
+}

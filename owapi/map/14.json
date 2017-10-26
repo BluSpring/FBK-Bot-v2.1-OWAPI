@@ -1,0 +1,12 @@
+{
+    "id": 14,
+    "name": "Watchpoint: Gibraltar",
+    "location": "The Rock of Gibraltar",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/14",
+    "mode": {
+        "id": 3,
+        "name": "Escort"
+    },
+    "stages": [],
+    "event": null
+}

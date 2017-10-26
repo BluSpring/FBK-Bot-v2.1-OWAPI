@@ -1,0 +1,12 @@
+{
+    "id": 2,
+    "name": "Eichenwalde",
+    "location": "Germany",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/2",
+    "mode": {
+        "id": 4,
+        "name": "Hybrid"
+    },
+    "stages": [],
+    "event": null
+}

@@ -10,9 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "Discord-Webhook": "^0.1.0",
-    "discord.js": "^11.1.0",
+    "discord.js": "^11.2.1",
     "forever-monitor": "^1.7.1",
     "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "random-cat": "^1.0.1",
+    "request": "^2.83.0",
     "webhook-discord": "^2.0.6",
     "ytdl-core": "^0.15.0"
   }

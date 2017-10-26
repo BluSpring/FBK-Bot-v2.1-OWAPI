@@ -1,0 +1,12 @@
+{
+    "id": 5,
+    "name": "Hollywood",
+    "location": "Los Angeles, California, United States of America",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/5",
+    "mode": {
+        "id": 4,
+        "name": "Hybrid"
+    },
+    "stages": [],
+    "event": null
+}

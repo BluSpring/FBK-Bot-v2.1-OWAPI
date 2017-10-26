@@ -1,0 +1,12 @@
+{
+    "id": 4,
+    "name": "Hanamura",
+    "location": "Japan",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/4",
+    "mode": {
+        "id": 1,
+        "name": "Assault"
+    },
+    "stages": [],
+    "event": null
+}

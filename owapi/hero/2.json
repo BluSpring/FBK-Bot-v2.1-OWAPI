@@ -1,0 +1,56 @@
+{
+    "id": 2,
+    "name": "Bastion",
+    "description": "Repair protocols and the ability to transform between stationary Assault, mobile Recon and devastating Tank configurations provide Bastion with a high probability of victory.",
+    "health": 200,
+    "armour": 100,
+    "shield": 0,
+    "real_name": "SST Laboratories Siege Automaton E54",
+    "age": 30,
+    "height": 220,
+    "affiliation": null,
+    "base_of_operations": null,
+    "difficulty": 1,
+	 "role": {
+        "id": 2,
+        "name": "defense"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 5,
+            "name": "Configuration: Recon",
+            "description": "In Recon mode, Bastion is fully mobile, outfitted with a submachine gun that fires steady bursts of bullets at medium range.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/5"
+        },
+        {
+            "id": 6,
+            "name": "Configuration: Sentry",
+            "description": "In Sentry mode, Bastion is a stationary powerhouse equipped with a gatling gun capable of unleashing a hail of bullets. The gun's aim can be \"walked\" across multiple targets dealing devastating damage at short to medium range.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/6"
+        },
+        {
+            "id": 7,
+            "name": "Reconfigure",
+            "description": "Bastion transforms between its two primary combat modes to adapt to changing battlefield conditions.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/7"
+        },
+        {
+            "id": 8,
+            "name": "Self-Repair",
+            "description": "Bastion restores its health; it cannot move or fire weapons while the repair process is in effect.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/8"
+        },
+        {
+            "id": 9,
+            "name": "Configuration: Tank",
+            "description": "In Tank mode, Bastion extends wheeled treads and a powerful long-range cannon. The cannon\u2019s explosive shells demolish targets in a wide blast radius, but Bastion can only remain in this mode for a limited time.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/9"
+        }
+    ]
+}

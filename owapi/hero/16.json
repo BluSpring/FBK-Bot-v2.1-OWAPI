@@ -1,0 +1,55 @@
+{
+    "id": 16,
+    "name": "Symmetra",
+    "description": "Symmetra utilizes her light-bending Photon Projector to dispatch adversaries, shield her associates, construct teleportation pads and deploy particle-blasting Sentry Turrets.",
+    "health": 100,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Satya Vaswani",
+    "age": 28,
+    "height": 170,
+    "affiliation": "Vishkar Corporation",
+    "base_of_operations": "Utopaea, India",
+    "difficulty": 2,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/16",
+    "role": {
+        "id": 4,
+        "name": "support"
+    },
+    "sub_roles": [
+        {
+            "id": 1,
+            "name": "builder"
+        }
+    ],
+    "abilities": [
+        {
+            "id": 74,
+            "name": "Photon Projector",
+            "description": "Symmetra\u2019s weapon emits a short-range beam that homes in on a nearby enemy, dealing continuous damage that increases the longer it is connected. The projector can also release a charged energy ball that deals high damage.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/74"
+        },
+        {
+            "id": 75,
+            "name": "Sentry Turret",
+            "description": "Symmetra sets up a small turret that automatically fires speed-reducing blasts at the nearest enemy within range. Several turrets can be built on the battlefield at once.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/75"
+        },
+        {
+            "id": 76,
+            "name": "Photon Shield",
+            "description": "Symmetra surrounds an ally with a hard-light shield that absorbs damage and persists as long as that ally remains alive.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/76"
+        },
+        {
+            "id": 77,
+            "name": "Teleporter",
+            "description": "Symmetra places a teleporter exit pad at her current location, and connects it to a teleporter entry pad at her team\u2019s starting point. Allies can travel through the entry pad to the exit pad instantly, enabling them to return to the fight swiftly after being defeated.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/77"
+        }
+    ]
+}

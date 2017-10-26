@@ -1,0 +1,12 @@
+{
+    "id": 1,
+    "name": "Dorado",
+    "location": "Mexico",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/1",
+    "mode": {
+        "id": 3,
+        "name": "Escort"
+    },
+    "stages": [],
+    "event": null
+}

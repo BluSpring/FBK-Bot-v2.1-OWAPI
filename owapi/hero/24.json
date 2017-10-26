@@ -1,0 +1,57 @@
+{
+    "id": 24,
+    "name": "Orisa",
+    "description": "Orisa serves as the central anchor of her team, and defends her teammates from the frontline with a protective barrier. She can attack from long range, fortify her own defenses, launch graviton charges to slow and move enemies, and deploy a Supercharger to boost the damage output of multiple allies at once.",
+    "health": 200,
+    "armour": 200,
+    "shield": 0,
+    "real_name": "Orisa",
+    "age": null,
+    "height": null,
+    "affiliation": null,
+    "base_of_operations": "Numbani",
+    "difficulty": 2,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/24",
+    "role": {
+        "id": 3,
+        "name": "tank"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 110,
+            "name": "Fusion Driver",
+            "description": "Orisa\u2019s automatic projectile cannon delivers sustained damage, but slows her movement while she fires it.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/110"
+        },
+        {
+            "id": 111,
+            "name": "Halt!",
+            "description": "Orisa launches a graviton charge which she can detonate, slowing nearby enemies and pulling them towards the explosion.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/111"
+        },
+        {
+            "id": 112,
+            "name": "Fortify",
+            "description": "Orisa temporarily reduces damage she takes, and cannot be affected by action-impairing effects.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/112"
+        },
+        {
+            "id": 113,
+            "name": "Protective Barrier",
+            "description": "Orisa throws out a stationary barrier that can protect her and her allies from enemy fire.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/113"
+        },
+        {
+            "id": 114,
+            "name": "Supercharger",
+            "description": "Orisa deploys a device to increase damage by 50% inflicted by allies within its line of sight.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/114"
+        }
+    ]
+}

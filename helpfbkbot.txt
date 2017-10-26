@@ -1,0 +1,46 @@
+```Markdown
+< FoozBallKing Bot Help >
+
+[Version]: v2.1 Build 75
+[Prefix]: |
+[Note]: Always add the prefix BEFORE the command's word itself!
+
+< General >
+
+[guilds]: Lists the guild number that the bot is currently in!
+[say]: Makes the bot talk! Make it appropriate, guys!
+[embed]: Makes the bot do an awesome embed thing!
+[botinfox]: Uh, a bot in a fox? xD just kidding. Just bot info. I hope...
+[help]: This command, obviously...
+[youtube]: Shows most of the TheFoozBallTable server's staff YT channels!
+[botspecs]: The bot's specifications? I guess...?
+[uptime]: Shows the bot's uptime!
+
+< Fun >
+
+[sparta]: THIS! IS! SPARTAAAAAAAAAAAAAA!!!!!!11!11!!1!!!1
+[cat]: Random cats!
+[animals]: Random animals? Really?
+
+< Moderation >
+
+[kick]: Kicks members! Example: "|kick @user#0000 Reason: Spamming."
+[kick2]: Kicks members! Example: "|kick @user#0000 Reason: Spamming.". Reserved for ShadowLegions Community server.
+[ban2]: Bans members! Example: "|ban @user2#0001 Reason: Evading bans.". Reserved for ShadowLegions Community server.
+
+< Music >
+
+We are unable to use this module.
+[Reason]: Errors.
+
+< Overwatch >
+# This module was made using the API from https://overwatch-api.net
+# Original idea by Nanomotion
+
+[hero]: Usage: "|hero <hero_name>". May not have all Overwatch heroes.
+[event]: Shows the events that happened!
+[map]: Looks for the maps in Overwatch! Not 100% accurate.
+[platform]: Uh... I don't know why this is here either xD
+```
+
+For more help, join https://discord.gg/xgBaPPE

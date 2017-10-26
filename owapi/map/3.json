@@ -1,0 +1,18 @@
+{
+    "id": 3,
+    "name": "Est\u00e1dio das R\u00e3s",
+    "location": "Rio de Janeiro, Brazil",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/3",
+    "mode": {
+        "id": 5,
+        "name": "L\u00facioball"
+    },
+    "stages": [],
+    "event": {
+        "id": 1,
+        "name": "Summer Games 2016",
+        "start_date": "2016-08-02",
+        "end_date": "2016-08-22",
+        "url": "https:\/\/overwatch-api.net\/api\/v1\/event\/1"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "id": 8,
+    "name": "McCree",
+    "description": "Armed with his Peacekeeper revolver, McCree takes out targets with deadeye precision and dives out of danger with eagle-like speed.",
+    "health": 200,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Jesse McCree",
+    "age": 37,
+    "height": 185,
+    "affiliation": "Deadlock Gang",
+    "base_of_operations": "Santa Fe, New Mexico",
+    "difficulty": 2,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/8",
+    "role": {
+        "id": 1,
+        "name": "offense"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 37,
+            "name": "Peacekeeper",
+            "description": "McCree fires off a round from his trusty six-shooter. He can fan the Peacekeeper\u2019s hammer to swiftly unload the entire cylinder.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/37"
+        },
+        {
+            "id": 38,
+            "name": "Combat Roll",
+            "description": "McCree dives in the direction he's moving, effortlessly reloading his Peacekeeper in the process.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/38"
+        },
+        {
+            "id": 39,
+            "name": "Flashbang",
+            "description": "McCree heaves a blinding grenade that explodes shortly after it leaves his hand. The blast staggers enemies in a small radius.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/39"
+        },
+        {
+            "id": 40,
+            "name": "Deadeye",
+            "description": "Focus. Mark. Draw. McCree takes a few precious moments to aim; when he's ready to fire, he shoots every enemy in his line of sight. The weaker his targets are, the faster he'll line up a killshot.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/40"
+        }
+    ]
+}

@@ -2,9 +2,25 @@ const Discord = require('discord.js')
 const bot = new Discord.Client();
 const client = new Discord.Client();
 const fs = require("fs");
-const ytdl = require("ytdl-core");
+const yt = require("ytdl-core");
 const tokenFile = require ("./token.json")
 const forever = require('forever-monitor')
+const opusencode = require('opusscript')
+const readTest = "G:\\New folder\\Animation\\FBK Bot v2\\FoozBallKing Bot v2.1 (JS)\\helpfbkbot.txt"
+const randomcat = require('random-cat')
+const ts = new Date()
+const http = require("http")
+const catdog = require("./catdog.json")
+const request = require("request")
+
+/*
+	fs.readFile(path, "utf8", function(error, data) {
+     if (error) {
+       console.error("read error:  " + error.message);
+     } else {
+       console.log(data);
+     }
+*/
 var errormsg_noperms = [{embed: {
     color: [170, 0, 0],
     title: "Error",
@@ -62,7 +78,7 @@ var prefix = "|"
 var bot_name = "FoozBallKing Bot v2.1"
 // Change to bot's name
 
-var build_number = "Build 32"
+var build_number = "Build 75"
 // Change to your build number
 
 var yt_api_key = "<none>"
@@ -71,10 +87,10 @@ var yt_api_key = "<none>"
 var bot_id = "292053219528671233"
 // Change to your bot's Client ID
 
-var version_bot = 'Build 32 (Built in 18/8/2017) (Music)'
+var version_bot = 'Build 75 (Built in 20/10/2017) (Music)'
 
 // \/ Change this ID to your 18 digit number ID. Use Developer Mode in Discord.
-var owner_id = "222955939714695168"
+var owner_id = "368700038488129538"
 var host_id = '209214117649711113'
 var owner_username = "IndoHQ Blu YT✓ᵛᵉʳᶦᶠᶦᵉᵈ#3035"
 // Change to your name and 4 digit ID
@@ -92,7 +108,6 @@ var client_id = '292053219528671233'
 // Change to your bot's Client ID (Yes for bot_id too)
 
 var queue = {};
-const yt = require('ytdl-core')
 
 
 // \/ This will be for commands. Edit them as much as you want.
@@ -107,99 +122,94 @@ bot.on('message', (message) => {
     }
 
     if(message.content.startsWith(prefix + 'help')) {
-        message.channel.send('```Markdown\n< FoozBallKing Bot v2.1 Help >\n[1]: General\n[' + prefix + 'help]: Shows this command!\n[' + prefix + 'youtube]: Shows YT channels of TheFoozBallTable staff!\n[' + prefix + 'botspecs]: Shows the specs of the bot!\n[' + prefix + 'uptime]: Shows the uptime of the bot in microseconds!\n[' + prefix + 'botinfox]: Shows shorter bot info\n\n[2]: Owner Only\n[' + prefix + 'shutdown]: Shuts down the bot.\n[' + prefix + '|mtcmode]: Sets the bot in Maintenance Mode.\n< TO BE CONTINUED >\n```\n\nFor help, join https://discord.gg/xgBaPPE')
-        console.log(message.author + ' has typed "|help"!')
-
-    }
+		fs.readFile(".\\helpfbkbot.txt", "utf8", function(error, data) {
+     if (error) {
+       console.error("Read error:  " + error.message);
+     } else {
+       message.author.send(data);
+     }
+		console.log(message.author + ' has typed "|help"!')
+		
+    })
+	}
 
 	// START MUSIC
 	
     if(message.content.startsWith(prefix + 'play')) {
-		if (queue[msg.guild.id] === undefined) return msg.channel.send(`Add some songs to the queue first with ${prefix}add`);
-		if (!msg.guild.voiceConnection) return commands.join(msg).then(() => commands.play(msg));
-		if (queue[msg.guild.id].playing) return msg.channel.send('Already Playing');
+		if (queue[message.guild.id] === undefined) return message.channel.send(`Add some songs to the queue first with ${prefix}add`);
+		if (!message.guild.voiceConnection) {
+			message.channel.send(`**ERROR!** Not in voice channel!\nTo join VC, type "${prefix}join"!`)
+		}
+		if (queue[message.guild.id].playing) return message.channel.send(':x: Already playing a song!');
 		let dispatcher;
-		queue[msg.guild.id].playing = true;
+		queue[message.guild.id].playing = true;
 
 		console.log(queue);
 		(function play(song) {
 			console.log(song);
-			if (song === undefined) return msg.channel.send('Queue is now empty.').then(() => {
-				queue[msg.guild.id].playing = false;
-				msg.member.voiceChannel.leave();
+			if (song === undefined) return message.channel.send('The queue is finished. The player has been stopped.').then(() => {
+				queue[message.guild.id].playing = false;
+				message.member.voiceChannel.leave();
 			});
-			msg.channel.send(`Playing: **${song.title}** as requested by: **${song.requester}**`);
-			dispatcher = msg.guild.voiceConnection.playStream(yt(song.url, { audioonly: true }), { passes : tokens.passes });
-			let collector = msg.channel.createCollector(m => m);
-			const m = new Discord.Message()
+			message.channel.send(`Playing: **${song.title}** as requested by: "${song.requester}"`);
+			dispatcher = message.guild.voiceConnection.playStream(yt(song.url, { audioonly: true }), { passes : tokens.passes });
+			let collector = message.channel.createCollector(m => m);
 			collector.on('message', m => {
 				if (m.content.startsWith(prefix + 'pause')) {
-					msg.channel.send('paused').then(() => {dispatcher.pause();});
+					message.channel.send(':pause_button: The player has been paused.').then(() => {dispatcher.pause();});
 				} else if (m.content.startsWith(prefix + 'resume')){
-					msg.channel.send('resumed').then(() => {dispatcher.resume();});
+					message.channel.send(':thumbsup: The player has resumed').then(() => {dispatcher.resume();});
 				} else if (m.content.startsWith(prefix + 'skip')){
-					msg.channel.send('skipped').then(() => {dispatcher.end();});
+					message.channel.send(':track_next: Skipped song.').then(() => {dispatcher.end();});
 				} else if (m.content.startsWith(prefix + 'volume+')){
-					if (Math.round(dispatcher.volume*50) >= 100) return msg.channel.sendMessage(`Volume: ${Math.round(dispatcher.volume*50)}%`);
-					dispatcher.setVolume(Math.min((dispatcher.volume*50 + (2*(m.content.split('+').length-1)))/50,2));
-					msg.channel.send(`Volume: ${Math.round(dispatcher.volume*50)}%`);
+					if (Math.round(dispatcher.volume*50) >= 100) return message.channel.send(`Volume: ${Math.round(dispatcher.volume*50)}%`);
+					dispatcher.setVolume(Math.min((dispatcher.volume*50 + (5*(m.content.split('+').length-1)))/50,2));
+					message.channel.send(`Volume: ${Math.round(dispatcher.volume*50)}%`);
 				} else if (m.content.startsWith(prefix + 'volume-')){
-					if (Math.round(dispatcher.volume*50) <= 0) return msg.channel.sendMessage(`Volume: ${Math.round(dispatcher.volume*50)}%`);
-					dispatcher.setVolume(Math.max((dispatcher.volume*50 - (2*(m.content.split('-').length-1)))/50,0));
-					msg.channel.send(`Volume: ${Math.round(dispatcher.volume*50)}%`);
+					if (Math.round(dispatcher.volume*50) <= 0) return message.channel.send(`Volume: ${Math.round(dispatcher.volume*50)}%`);
+					dispatcher.setVolume(Math.max((dispatcher.volume*50 - (5*(m.content.split('-').length-1)))/50,0));
+					message.channel.send(`Volume: ${Math.round(dispatcher.volume*50)}%`);
 				} else if (m.content.startsWith(prefix + 'time')){
-					msg.channel.send(`time: ${Math.floor(dispatcher.time / 60000)}:${Math.floor((dispatcher.time % 60000)/1000) <10 ? '0'+Math.floor((dispatcher.time % 60000)/1000) : Math.floor((dispatcher.time % 60000)/1000)}`);
+					message.channel.send(`time: ${Math.floor(dispatcher.time / 60000)}:${Math.floor((dispatcher.time % 60000)/1000) <10 ? '0'+Math.floor((dispatcher.time % 60000)/1000) : Math.floor((dispatcher.time % 60000)/1000)}`);
 				}
 			});
 			dispatcher.on('end', () => {
 				collector.stop();
 			});
 			dispatcher.on('error', (err) => {
-				return msg.channel.send('error: ' + err).then(() => {
+				return message.channel.send('Error: ' + err).then(() => {
 					collector.stop();
 				});
 			});
 		})
 	}
 	
-	if(message.content.startsWith(prefix + 'end')) {
-		return new Promise((resolve, reject) => {
-			const voiceChannel = msg.member.voiceChannel;
-			if (!voiceChannel || voiceChannel.type !== 'voice') return msg.channel.send(errormsg_play);
-			voiceChannel.join().then(connection => resolve(connection)).catch(err => reject(err));
-});
-	}
-
-	if(message.content.startsWith(prefix + 'add')) {
-		let url = msg.content.split(' ')[1];
-		if (url == '' || url === undefined) return msg.channel.send(`You must add a YouTube video url, or id after ${prefix}add`);
-		yt.getInfo(url, (err, info) => {
-			if(err) return msg.channel.send({embed: {
-    color: [170, 0, 0],
-    author: {
-      name: message.author.username,
-      icon_url: message.author.avatarURL
-    },
-    title: "Error",
-    description: `Invalid YouTube URL! \`${err}\``,
-
-    timestamp: new Date(),
-    footer: {
-      text: "Don't worry, get help from here: https://discord.gg/xgBaPPE"
-    }
-}
-});
-			if (!queue.hasOwnProperty(msg.guild.id)) queue[msg.guild.id] = {}, queue[msg.guild.id].playing = false, queue[msg.guild.id].songs = [];
-			queue[msg.guild.id].songs.push({url: url, title: info.title, requester: msg.author.username});
-			msg.channel.send(`added **${info.title}** to the queue`);
-});
-	}
-
 	if(message.content.startsWith(prefix + 'queue')) {
-		if (queue[msg.guild.id] === undefined) return msg.channel.send(`Add some songs to the queue first with ${prefix}add!`);
+		if (queue[message.guild.id] === undefined) return message.channel.send(`Add some songs to the queue first with ${tokens.prefix}add`);
 		let tosend = [];
-		queue[msg.guild.id].songs.forEach((song, i) => { tosend.push(`${i+1}. ${song.title} - Requested by: ${song.requester}`);});
-msg.channel.send(`__**${msg.guild.name}'s Music Queue:**__ Currently **${tosend.length}** songs queued ${(tosend.length > 15 ? '*[Only next 15 shown]*' : '')}\n\`\`\`${tosend.slice(0,15).join('\n')}\`\`\``);
+		queue[message.guild.id].songs.forEach((song, i) => { tosend.push(`${i+1}. ${song.title} - Requested by: ${song.requester}`);});
+		message.channel.send('```\n' + `${message.guild.name}'s Music Queue:**\n Currently "${tosend.length}" songs queued\n ${(tosend.length > 15 ? '[Only next 15 shown]' : '')}\n\`\`\`${tosend.slice(0,15).join('\n')}\`\`\``);
+	}
+	
+	if(message.content.startsWith(prefix + 'join')) {
+		return new Promise((resolve, reject) => {
+			const voiceChannel = message.member.voiceChannel;
+			if (!voiceChannel || voiceChannel.type !== 'voice') return message.channel.send(errormsg_voice);
+			voiceChannel.join().then(connection => resolve(connection)).catch(err => reject(err));
+		});
+	}
+	
+	if(message.content.startsWith(prefix + 'add')) {
+		let url = message.content.split(' ')[1];
+		if (url == '' || url === undefined) return message.channel.send(`:x: You must add a YouTube video url, or id after ${prefix}play`);
+		yt.getInfo(url, (err, info) => {
+			if(err) return message.channel.send('Invalid YouTube Link: ' + err);
+			if (!queue.hasOwnProperty(message.guild.id)) queue[message.guild.id] = {}, queue[message.guild.id].playing = false, queue[message.guild.id].songs = [];
+			queue[message.guild.id].songs.push({url: url, title: info.title, requester: message.author.username});
+			message.channel.send(`Added **${info.title}** requested by "${message.author.username}" to the queue`);
+			message.channel.send('Type `|play` to start the player.')
+			fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} added to queue with link ${url}`)
+		});
 	}
 
 	// END MUSIC
@@ -210,7 +220,7 @@ msg.channel.send(`__**${msg.guild.name}'s Music Queue:**__ Currently **${tosend.
     }
 
     if(message.content.startsWith(prefix + 'shutdown')) {
-        if (owner_id || host_id == String(message.author.id)) {
+        if (owner_id == String(message.author.id)) {
             // Shutdown here...
             message.channel.send(':wave: Shutting down... (Code help by Der, the developer of NanoBot)')
             console.log(message.author + ' is now shutting down the bot!')
@@ -219,26 +229,29 @@ msg.channel.send(`__**${msg.guild.name}'s Music Queue:**__ Currently **${tosend.
             bot.destroy()
             console.log('The bot is now shut down.')
             console.clear
+			fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} shut down the bot`)
         } else {
             // No perms
             message.channel.send(errormsg_noperms)
             console.log(message.author + ' tried shutting down the bot, but has no permission!')
+			fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} tried shutting down bot.`)
     }
 }
     
 	if(message.content.startsWith(prefix + 'restart')) {
-        if (owner_id || host_id == String(message.author.id)) {
+        if (owner_id == String(message.author.id)) {
             // Restart here...
             message.channel.send(':wave: Restarting...')
             console.log(message.author + ' is now restarting the bot!')
             bot.user.setGame('Restarting...')
             bot.user.setStatus('invisible')
             bot.destroy()
-            process.exit()
+			fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} restarted bot.`)
         } else {
             // No perms
             message.channel.send(errormsg_noperms)
             console.log(message.author + ' tried restarting the bot, but has no permission!')
+			fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} attempted to restart bot.`)
     }
 }
 
@@ -339,15 +352,24 @@ msg.channel.send(`__**${msg.guild.name}'s Music Queue:**__ Currently **${tosend.
     // \/ This is to show what is being used. Edit them to what your specs are. Do not touch the library or the coded with thing. Don't touch the errors and uptime thing either.
 
     if(message.content.startsWith(prefix + 'botspecs')) {
-        message.channel.send('```Markdown\n< FoozBallKing Bot v2.1 ' + build_number + ' >\n[Library]: Discord.JS\n[Coded with]: Node.JS and Visual Studio Code, Notepad++\n[Coded by]: IndoHQ Blu YT✓ᵛᵉʳᶦᶠᶦᵉᵈ\n[Help by]: Der✓ (Developer of NanoBot)\n[Laptop]: ASUS EeePC Seashell 1015PEM\n[Core]: Intel Atom N550 (Dual Core)\n[OS]: Windows 7 Starter\n[RAM usage]: unknown MB / 1024 MB\n[Total RAM]: 1 GB\n[Internet]: Maxis Fibre Internet 20 Mbps\n[Internet Utilization]: unknown\n[Errors]: unknown\n[Uptime (MicroSeconds)]: ' + bot.uptime + '\n```')
-        console.log(message.author + ' has typed "|botspecs"!')
+		var days = Math.floor(bot.uptime / 86400000000000)
+		var hours = Math.floor(bot.uptime / 3600000)
+		var minutes = Math.floor((bot.uptime % 3600000) / 60000)
+		var seconds = Math.floor(((bot.uptime % 360000) % 60000) / 1000)
+        message.channel.send('```Markdown\n< FoozBallKing Bot v2.1 ' + build_number + ' >\n[Library]: Discord.JS\n[Coded with]: Node.JS and Visual Studio Code, Notepad++\n[Coded by]: IndoHQ Blu YT✓ᵛᵉʳᶦᶠᶦᵉᵈ\n[Help by]: Der✓ (Developer of NanoBot)\n[Laptop]: ASUS A55VD\n[Core]: Intel i3-3120M (Quad Core)\n[OS]: Windows 10 Home\n[RAM usage]: unknown MB / 8196 MB\n[Total RAM]: 8 GB\n[Internet]: null\n[Internet Utilization]: unknown\n[Errors]: unknown\n[Uptime]: ' + days + ' days : ' + hours + ' hours : ' + minutes + ' minutes : ' + seconds + ' seconds\n```')
+        console.log(message.author.username + ' has typed "|botspecs"!')
     }
 
     if(message.content.startsWith(prefix + 'uptime')) {
         message.channel.send('Sending uptime information in Console and chat!')
-        console.log(message.author + ' has requested for Uptime stats! Sending...')
-        console.log('Uptime: ' + bot.uptime)
-        message.channel.send('Uptime stats: `' + bot.uptime + '`')
+        console.log(message.author.username + ' has requested for Uptime stats! Sending...')
+        // CONVERT MILLISECONDS TO DIGITAL CLOCK FORMAT
+		var days = Math.floor(bot.uptime / 86400000000000)
+		var hours = Math.floor(bot.uptime / 3600000)
+		var minutes = Math.floor((bot.uptime % 3600000) / 60000)
+		var seconds = Math.floor(((bot.uptime % 360000) % 60000) / 1000)
+		message.channel.send('Uptime: `' + days + ' days : ' + hours + ' hours : ' + minutes + ' minutes : ' + seconds + ' seconds`')
+		console.log('Uptime: ' + days + ' days : ' + hours + ' hours : ' + minutes + ' minutes : ' + seconds + ' seconds')
         console.log('Uptime information sent!')
     }
 	
@@ -359,13 +381,13 @@ msg.channel.send(`__**${msg.guild.name}'s Music Queue:**__ Currently **${tosend.
 	const args = message.content.split(" ").slice(1);
 
 	if (message.content.startsWith(prefix + "eval")) {
-		if(message.author.id !== owner_id && host_id) {
+		if(message.author.id !== owner_id) {
 			message.channel.send(errormsg_noperms)
-		}
+		} else {
 		try {
-			const code = args.join(" ");
+			const code = args.join(" ")
 			let evaled = eval(code);
-
+			fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} used evaluation with evaluation: " ${code}`)
 			if (typeof evaled !== "string")
 			evaled = require("util").inspect(evaled);
 
@@ -373,6 +395,8 @@ msg.channel.send(`__**${msg.guild.name}'s Music Queue:**__ Currently **${tosend.
 		} catch (err) {
       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
+	
+	}
 	}
 
     if(message.content.startsWith(prefix + 'embed')) {
@@ -394,6 +418,7 @@ msg.channel.send(`__**${msg.guild.name}'s Music Queue:**__ Currently **${tosend.
     }
   }
 });
+fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} used embed with embed: " ${descembed} "`)
     }
 
     
@@ -402,12 +427,131 @@ msg.channel.send(`__**${msg.guild.name}'s Music Queue:**__ Currently **${tosend.
         message.delete()
         var saytext = args.join(" ");
         message.channel.send(saytext)
+		fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} used say with text " ${saytext} "`)
     }
 
     if(message.content.startsWith(prefix + 'guilds')) {
         message.channel.send(`I'm in \`${bot.guilds.size} guilds\`!`)
     }
-
+	
+	
+	if (message.content.startsWith(prefix + "kick1")) {
+    let modRole = message.guild.roles.find("name", "FMod");
+    if(message.member.roles.has(modRole.id)) { 
+      let kickMember = message.guild.member(message.mentions.users.first());
+      message.guild.member(kickMember).kick(args.join(" "));
+      message.channel.send(`Successfully kicked ${kickMember} with reason ${args.join}`);
+	  fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} kicked user ${kickMember.username} with reason: " ${args.join(" ")} "`)
+    } else {
+      return message.channel.send("**ERROR!** You do not have permission!");
+    }
+	
+  }
+  
+	// ShadowLegion Server reserved
+	
+	const helper = bot.guilds.get("355411227045920769").roles.find('name', "[Helper]")
+	const mod = bot.guilds.get("355411227045920769").roles.find('name', "[Mod]")
+	const jrmod = bot.guilds.get("355411227045920769").roles.find('name', "[Jr.Mod]")
+	const admin = bot.guilds.get("355411227045920769").roles.find('name', "[Admin]")
+	const hadmin = bot.guilds.get("355411227045920769").roles.find('name', "[Head Admin]")
+	const owner = bot.guilds.get("355411227045920769").roles.find('name', "[Owner]")
+	
+	if(message.content.startsWith(prefix + "kick2")) {
+		if(message.member.roles.has(jrmod.id)) {
+			let kickMember = message.guild.member(message.mentions.users.first());
+			message.guild.member(kickMember).kick(args.join(" "));
+			message.channel.send(`Successfully kicked ${kickMember} with reason ${args.join}`);
+			fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} kicked user ${kickMember.username} with reason: " ${args.join(" ")} "`)
+		} else if(message.member.roles.has(admin.id)) {
+			let kickMember = message.guild.member(message.mentions.users.first());
+			message.guild.member(kickMember).kick(args.join(" "));
+			message.channel.send(`Successfully kicked ${kickMember} with reason ${args.join}`);
+			fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} kicked user ${kickMember.username} with reason: " ${args.join(" ")} "`)
+		} else if(message.member.roles.has(hadmin.id)) {
+			let kickMember = message.guild.member(message.mentions.users.first());
+      message.guild.member(kickMember).kick(args.join(" "));
+      message.channel.send(`Successfully kicked ${kickMember} with reason ${args.join}`);
+	  fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} kicked user ${kickMember.username} with reason: " ${args.join(" ")} "`)
+		} else if(message.member.roles.has(owner.id)) {
+			let kickMember = message.guild.member(message.mentions.users.first());
+      message.guild.member(kickMember).kick(args.join(" "));
+      message.channel.send(`Successfully kicked ${kickMember} with reason ${args.join}`);
+	  fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} kicked user ${kickMember.username} with reason: " ${args.join(" ")} "`)
+		} else {
+			message.channel.send('**ERROR!** You have no permission! You must be Jr. Mod or higher in server `ShadowLegion Community`.')
+		}
+	}
+	
+	if(message.content.startsWith(prefix + "ban2")) {
+		if(message.member.roles.has(jrmod.id)) {
+			let kickMember = message.guild.member(message.mentions.users.first());
+			message.guild.member(kickMember).ban(args.join(" "));
+			message.channel.send(`Successfully banned ${kickMember} with reason ${args.join}`);
+			fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} banned user ${kickMember.username} with reason: " ${args.join(" ")} "`)
+		} else if(message.member.roles.has(admin.id)) {
+			let kickMember = message.guild.member(message.mentions.users.first());
+			message.guild.member(kickMember).ban(args.join(" "));
+			message.channel.send(`Successfully banned ${kickMember} with reason ${args.join}`);
+			fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} banned user ${kickMember.username} with reason: " ${args.join(" ")} "`)
+		} else if(message.member.roles.has(hadmin.id)) {
+			let kickMember = message.guild.member(message.mentions.users.first());
+      message.guild.member(kickMember).ban(args.join(" "));
+      message.channel.send(`Successfully banned ${kickMember} with reason ${args.join}`);
+	  fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} banned user ${kickMember.username} with reason: " ${args.join(" ")} "`)
+		} else if(message.member.roles.has(owner.id)) {
+			let kickMember = message.guild.member(message.mentions.users.first());
+      message.guild.member(kickMember).ban(args.join(" "));
+      message.channel.send(`Successfully banned ${kickMember} with reason ${args.join}`);
+	  fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} banned user ${kickMember.username} with reason: " ${args.join(" ")} "`)
+	  } else if(message.member.roles.has(mod.id)) {
+			let kickMember = message.guild.member(message.mentions.users.first());
+			message.guild.member(kickMember).ban(args.join(" "));
+			message.channel.send(`Successfully banned ${kickMember} with reason ${args.join}`);
+			fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} banned user ${kickMember.username} with reason: " ${args.join(" ")} "`)
+		} else {
+			message.channel.send('**ERROR!** You have no permission! You must be Mod or higher in server `ShadowLegion Community`.')
+		}
+	}
+	
+	
+	// Reservation end
+  
+  if(message.content.startsWith(prefix + 'msg')) {
+	  message.author.send('WHY DA FLIP DID YOU DO THAT!??!?!?!?!??!?!?')
+	  message.author.send(':middle_finger:')
+  }
+  
+  if(message.content.startsWith(prefix + 'cat')) {
+	  const catfile = require("./catdog.json")
+	  request('http://random.cat/meow').pipe(fs.createWriteStream('./catdog.json'))
+  message.channel.send(`Here's your random cat! ${catfile.file}`)
+  }
+  
+  if(message.content.startsWith(prefix + 'animals')) {
+	  var url = randomcat.get({
+  category: 'animals'
+});
+	message.channel.send(url + '\nHere\'s your random... animal?')
+  }
+  
+  if(message.content.startsWith(prefix + 'dog')) {
+	  const dogfile = require("./woof.json")
+	  request('https://random.dog/woof.json').pipe(fs.createWriteStream('./woof.json'))
+  message.channel.send(`Here's your random dog! ${dogfile.url}`)
+  }
+  
+  if (message.content.startsWith(prefix + "kick3")) {
+    if(message.author.id == "368700038488129538") { 
+      let kickMember = message.guild.member(message.mentions.users.first());
+      message.guild.member(kickMember).kick(args.join(" "));
+      message.channel.send(`Successfully kicked ${kickMember} with reason ${args.join}`);
+	  fs.appendFile("fbkbotlog.txt", `\n${ts} ${message.author.username} in ${message.guild.id} or ${message.guild.name} kicked user ${kickMember.username} with reason: " ${args.join(" ")} "`)
+    } else {
+      return message.channel.send("**ERROR!** You do not have permission!");
+    }
+  }
+	
     } )
 
 bot.on('ready', () => {
@@ -454,3 +598,50 @@ function clean(text) {
   else
       return text;
 }
+
+
+
+/*
+	Random cat/dog setup
+	
+	function cat {
+
+var options = {
+    host: 'random.cat',
+    path: '/meow'
+}
+var request = http.request(options, function (res) {
+    var data = '';
+    res.on('data', function (chunk) {
+        data += chunk;
+    });
+    res.on('end', function () {
+		return data;
+    });
+});
+request.on('error', function (e) {
+    throw err;
+});
+request.end();
+	}
+	
+	function dog {
+		var options = {
+    host: 'random.dog',
+    path: '/woof'
+}
+var request = http.request(options, function (res) {
+    var data = '';
+    res.on('data', function (chunk) {
+        data += chunk;
+    });
+    res.on('end', function () {
+		return data;
+    });
+});
+request.on('error', function (e) {
+    throw err;
+});
+request.end();
+	}
+*/

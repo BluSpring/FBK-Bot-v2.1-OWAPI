@@ -1,0 +1,12 @@
+{
+    "id": 7,
+    "name": "King's Row",
+    "location": "London, England",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/7",
+    "mode": {
+        "id": 4,
+        "name": "Hybrid"
+    },
+    "stages": [],
+    "event": null
+}

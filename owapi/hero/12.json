@@ -1,0 +1,57 @@
+{
+    "id": 12,
+    "name": "Reaper",
+    "description": "Hellfire Shotguns, the ghostly ability to become immune to damage, and the power to step between shadows make Reaper one of the deadliest beings on Earth.",
+    "health": 250,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Gabriel Reyes",
+    "age": 56,
+    "height": 185,
+    "affiliation": "Overwatch",
+    "base_of_operations": "Los Angeles, California, United States of America",
+    "difficulty": 1,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/12",
+    "role": {
+        "id": 1,
+        "name": "offense"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 55,
+            "name": "Hellfire Shotguns",
+            "description": "Reaper tears enemies apart with twin shotguns.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/55"
+        },
+        {
+            "id": 56,
+            "name": "Wraith Form",
+            "description": "Reaper becomes a shadow for a short period of time. While in this form, he takes no damage and is able to pass through enemies, but cannot fire his weapons or use other abilities.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/56"
+        },
+        {
+            "id": 57,
+            "name": "Shadow Step",
+            "description": "After marking a destination, Reaper disappears and reappears at that location.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/57"
+        },
+        {
+            "id": 58,
+            "name": "The Reaping",
+            "description": "Reaper collects souls from fallen enemies to replenish his health.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/58"
+        },
+        {
+            "id": 59,
+            "name": "Death Blossom",
+            "description": "In a blur of motion, Reaper empties both hellfire shotguns at breakneck speed, dealing massive damage to all nearby enemies.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/59"
+        }
+    ]
+}

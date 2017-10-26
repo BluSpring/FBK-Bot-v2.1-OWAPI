@@ -1,0 +1,57 @@
+{
+    "id": 11,
+    "name": "Pharah",
+    "description": "Soaring through the air in her combat armor, and armed with a launcher that lays down high-explosive rockets, Pharah is a force to be reckoned with.",
+    "health": 200,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Fareeha Amari",
+    "age": 32,
+    "height": 180,
+    "affiliation": "Helix Security International",
+    "base_of_operations": "Giza, Egypt",
+    "difficulty": 1,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/11",
+    "role": {
+        "id": 1,
+        "name": "offense"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 50,
+            "name": "Rocket Launcher",
+            "description": "Pharah\u2019s primary weapon launches rockets that deal significant damage in a wide blast radius.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/50"
+        },
+        {
+            "id": 51,
+            "name": "Concussive Blast",
+            "description": "Pharah looses a wrist rocket that knocks back any enemies it strikes.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/51"
+        },
+        {
+            "id": 52,
+            "name": "Jump Jet",
+            "description": "Propelled by her suit\u2019s thrusters, Pharah soars high into the air.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/52"
+        },
+        {
+            "id": 53,
+            "name": "Hover Jets",
+            "description": "Pharah hovers in mid-air.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/53"
+        },
+        {
+            "id": 54,
+            "name": "Barrage",
+            "description": "Pharah directs a continuous salvo of mini-rockets to destroy groups of enemies.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/54"
+        }
+    ]
+}

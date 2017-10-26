@@ -1,0 +1,62 @@
+{
+    "id": 5,
+    "name": "Hanzo",
+    "description": "Hanzo\u2019s versatile arrows can reveal his enemies or fragment to strike multiple targets. He can scale walls to fire his bow from on high, or summon a titanic spirit dragon.",
+    "health": 200,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Hanzo Shimada",
+    "age": 38,
+    "height": 173,
+    "affiliation": "Shimada Clan",
+    "base_of_operations": "Hanamura, Japan",
+    "difficulty": 3,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/5",
+    "role": {
+        "id": 2,
+        "name": "defense"
+    },
+    "sub_roles": [
+        {
+            "id": 3,
+            "name": "sniper"
+        }
+    ],
+    "abilities": [
+        {
+            "id": 22,
+            "name": "Storm Bow",
+            "description": "Hanzo nocks and fires an arrow at his target.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/22"
+        },
+        {
+            "id": 23,
+            "name": "Scatter Arrow",
+            "description": "Hanzo shoots a fragmenting arrow that ricochets off walls and objects and can strike multiple targets at once.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/23"
+        },
+        {
+            "id": 24,
+            "name": "Sonic Arrow",
+            "description": "Hanzo launches an arrow that contains a sonar tracking device. Any enemy within its detection radius is visibly marked, making them easier for Hanzo and his allies to hunt down.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/24"
+        },
+        {
+            "id": 25,
+            "name": "Wall Climb",
+            "description": "Hanzo can climb any vertical surface.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/25"
+        },
+        {
+            "id": 26,
+            "name": "Dragonstrike",
+            "description": "Hanzo summons a Spirit Dragon which travels through the air in a line. It passes through walls in its way, devouring any enemies it encounters.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/26"
+        }
+    ]
+}

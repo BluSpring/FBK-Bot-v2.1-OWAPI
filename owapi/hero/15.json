@@ -1,0 +1,57 @@
+{
+    "id": 15,
+    "name": "Soldier: 76",
+    "description": "Armed with cutting-edge weaponry, including an experimental pulse rifle that\u2019s capable of firing spirals of high-powered Helix Rockets, Soldier: 76 has the speed and support know-how of a highly trained warrior.",
+    "health": 200,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Jack Morrison",
+    "age": 55,
+    "height": 185,
+    "affiliation": "Overwatch",
+    "base_of_operations": null,
+    "difficulty": 1,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/15",
+    "role": {
+        "id": 1,
+        "name": "offense"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 69,
+            "name": "Heavy Pulse Rifle",
+            "description": "Soldier: 76\u2019s rifle remains particularly steady while unloading fully-automatic pulse fire. He can also fire single shots with pinpoint accuracy.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/69"
+        },
+        {
+            "id": 70,
+            "name": "Helix Rockets",
+            "description": "Tiny rockets spiral out of Soldier: 76\u2019s Pulse Rifle in a single burst. The rockets\u2019 explosion damages enemies in a small radius.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/70"
+        },
+        {
+            "id": 71,
+            "name": "Sprint",
+            "description": "Whether he needs to evade a firefight or get back into one, Soldier: 76 can rush ahead in a burst of speed. His sprint ends if he takes an action other than charging forward.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/71"
+        },
+        {
+            "id": 72,
+            "name": "Biotic Field",
+            "description": "Soldier: 76 plants a biotic emitter on the ground. Its energy projection restores health to 76 and any of his squadmates within the field.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/72"
+        },
+        {
+            "id": 73,
+            "name": "Tactical Visor",
+            "description": "Soldier: 76\u2019s pinpoint targeting visor \u201clocks\u201d his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/73"
+        }
+    ]
+}

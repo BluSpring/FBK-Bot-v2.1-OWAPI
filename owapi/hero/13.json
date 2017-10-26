@@ -1,0 +1,57 @@
+{
+    "id": 13,
+    "name": "Reinhardt",
+    "description": "Clad in powered armor and swinging his hammer, Reinhardt leads a rocket-propelled charge across the battleground and defends his squadmates with a massive energy barrier.",
+    "health": 300,
+    "armour": 200,
+    "shield": 0,
+    "real_name": "Reinhardt Wilhelm",
+    "age": 61,
+    "height": 223,
+    "affiliation": "Overwatch",
+    "base_of_operations": "Stuttgart, Germany",
+    "difficulty": 1,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/13",
+    "role": {
+        "id": 3,
+        "name": "tank"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 60,
+            "name": "Rocket Hammer",
+            "description": "Reinhardt\u2019s Rocket Hammer is an exemplary melee weapon, able to deal punishing damage in a wide arc with every swing.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/60"
+        },
+        {
+            "id": 61,
+            "name": "Barrier Field",
+            "description": "Reinhardt projects a broad, forward-facing energy barrier, which can absorb substantial damage before it is destroyed. Although Reinhardt can protect himself and his companions behind the barrier, he cannot attack while sustaining it.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/61"
+        },
+        {
+            "id": 62,
+            "name": "Charge",
+            "description": "Reinhardt charges forth in a straight line, pinning the first enemy in his path and knocking others aside. If he collides with a wall, the foe he\u2019s carrying suffers extreme damage.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/62"
+        },
+        {
+            "id": 63,
+            "name": "Fire Strike",
+            "description": "By whipping his Rocket Hammer forward, Reinhardt slings a flaming projectile which pierces and damages any enemies it touches.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/63"
+        },
+        {
+            "id": 64,
+            "name": "Earthshatter",
+            "description": "Reinhardt forcefully slams his rocket hammer into the ground, knocking down and damaging all enemies in front of him.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/64"
+        }
+    ]
+}

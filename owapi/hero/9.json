@@ -1,0 +1,50 @@
+{
+    "id": 9,
+    "name": "Mei",
+    "description": "Mei\u2019s weather-altering devices slow opponents and protect locations. Her Endothermic Blaster unleashes damaging icicles and frost streams, and she can Cryo-Freeze herself to guard against counterattacks, or obstruct the opposing team's movements with an Ice Wall.",
+    "health": 250,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "Mei-Link Zhou",
+    "age": 31,
+    "height": 160,
+    "affiliation": "Overwatch",
+    "base_of_operations": "Xi'an, China",
+    "difficulty": 3,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/9",
+    "role": {
+        "id": 2,
+        "name": "defense"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 41,
+            "name": "Endothermic Blaster",
+            "description": "Mei's blaster unleashes a concentrated, short-range stream of frost that damages, slows, and ultimately freezes enemies in place. Mei can also use her blaster to shoot icicle-like projectiles at medium range.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/41"
+        },
+        {
+            "id": 42,
+            "name": "Cryo-Freeze",
+            "description": "Mei instantly surrounds herself with a block of thick ice. She heals and ignores damage while encased, but cannot move or use abilities.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/42"
+        },
+        {
+            "id": 43,
+            "name": "Ice Wall",
+            "description": "Mei generates an enormous ice wall that obstructs lines of sight, stops movement, and blocks attacks.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/43"
+        },
+        {
+            "id": 44,
+            "name": "Blizzard",
+            "description": "Mei deploys a weather-modification drone that emits gusts of wind and snow in a wide area. Enemies caught in the blizzard are slowed and take damage; those who linger too long are frozen solid.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/44"
+        }
+    ]
+}

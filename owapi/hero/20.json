@@ -1,0 +1,50 @@
+{
+    "id": 20,
+    "name": "Winston",
+    "description": "Winston wields impressive inventions\u2014a jump pack, electricity-blasting Tesla Cannon, portable shield projector and more\u2014with literal gorilla strength.",
+    "health": 400,
+    "armour": 100,
+    "shield": 0,
+    "real_name": "Winston",
+    "age": 29,
+    "height": 220,
+    "affiliation": "Overwatch",
+    "base_of_operations": "Watchpoint Gibraltar",
+    "difficulty": 2,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/20",
+    "role": {
+        "id": 3,
+        "name": "tank"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 92,
+            "name": "Tesla Cannon",
+            "description": "Winston\u2019s weapon fires a short-range electric barrage for as long as he holds down the trigger.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/92"
+        },
+        {
+            "id": 93,
+            "name": "Jump Pack",
+            "description": "Assisted by his energy pack, Winston lunges through the air, dealing significant damage and staggering nearby enemies when he lands.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/93"
+        },
+        {
+            "id": 94,
+            "name": "Barrier Projector",
+            "description": "Winston's barrier projector extends a bubble-shaped field that absorbs damage until it's destroyed. Allies protected by the barrier can return fire from within it.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/94"
+        },
+        {
+            "id": 95,
+            "name": "Primal Rage",
+            "description": "Winston embraces his animal nature, significantly boosting his health and making him very difficult to kill, strengthening his melee attack, and allowing him to use his Jump Pack ability more frequently. While raging, Winston can only make melee and Jump Pack attacks.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/95"
+        }
+    ]
+}

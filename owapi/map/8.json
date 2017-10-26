@@ -1,0 +1,25 @@
+{
+    "id": 8,
+    "name": "Lijiang Tower",
+    "location": "Lijiang, China",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/8",
+    "mode": {
+        "id": 2,
+        "name": "Control"
+    },
+    "stages": [
+        {
+            "id": 4,
+            "name": "Night Market"
+        },
+        {
+            "id": 5,
+            "name": "Garden"
+        },
+        {
+            "id": 6,
+            "name": "Control Center"
+        }
+    ],
+    "event": null
+}

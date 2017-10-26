@@ -1,0 +1,12 @@
+{
+    "id": 12,
+    "name": "Temple of Anubis",
+    "location": "Egypt",
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/map\/12",
+    "mode": {
+        "id": 1,
+        "name": "Assault"
+    },
+    "stages": [],
+    "event": null
+}

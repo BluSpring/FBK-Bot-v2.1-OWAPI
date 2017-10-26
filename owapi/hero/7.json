@@ -1,0 +1,62 @@
+{
+    "id": 7,
+    "name": "L\u00facio",
+    "description": "On the battlefield, L\u00facio\u2019s cutting-edge Sonic Amplifier buffets enemies with projectiles and knocks foes back with blasts of sound. His songs can both heal his team or boost their movement speed, and he can switch between tracks on the fly.",
+    "health": 200,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "L\u00facio Correia dos Santos",
+    "age": 26,
+    "height": 160,
+    "affiliation": null,
+    "base_of_operations": "Rio de Janeiro, Brazil",
+    "difficulty": 2,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/7",
+    "role": {
+        "id": 4,
+        "name": "support"
+    },
+    "sub_roles": [
+        {
+            "id": 2,
+            "name": "healer"
+        }
+    ],
+    "abilities": [
+        {
+            "id": 32,
+            "name": "Sonic Amplifier",
+            "description": "L\u00facio can hit his enemies with sonic projectiles or knock them back with a blast of sound.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/32"
+        },
+        {
+            "id": 33,
+            "name": "Crossfade",
+            "description": "L\u00facio continuously energizes himself, and nearby teammates, with music. He can switch between two songs: one amplifies movement speed, while the other regenerates health.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/33"
+        },
+        {
+            "id": 34,
+            "name": "Amp It Up",
+            "description": "L\u00facio increases the volume on his speakers, boosting the effects of his songs.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/34"
+        },
+        {
+            "id": 35,
+            "name": "Wall Ride",
+            "description": "L\u00facio rides along a wall. This has a slight upwards angle, allowing him to ascend the wall.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/35"
+        },
+        {
+            "id": 36,
+            "name": "Sound Barrier",
+            "description": "Protective waves radiate out from L\u00facio\u2019s Sonic Amplifier, briefly providing him and nearby allies with personal shields.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/36"
+        }
+    ]
+}

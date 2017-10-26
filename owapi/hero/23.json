@@ -1,0 +1,57 @@
+{
+    "id": 23,
+    "name": "Sombra",
+    "description": "Stealth and debilitating attacks make Sombra a powerful infiltrator. Her hacking can disrupt her enemies, ensuring they're easier to take out, while her EMP provides the upper hand against multiple foes at once. Sombra\u2019s ability to Translocate and camouflage herself makes her a hard target to pin down.",
+    "health": 200,
+    "armour": 0,
+    "shield": 0,
+    "real_name": "\u2591\u2591\u2591\u2591\u2591\u2591",
+    "age": 30,
+    "height": null,
+    "affiliation": "Talon",
+    "base_of_operations": "Dorado, Mexico",
+    "difficulty": 3,
+    "url": "https:\/\/overwatch-api.net\/api\/v1\/hero\/23",
+    "role": {
+        "id": 1,
+        "name": "offense"
+    },
+    "sub_roles": [],
+    "abilities": [
+        {
+            "id": 105,
+            "name": "Machine Pistol",
+            "description": "Sombra\u2019s fully-automatic machine pistol fires in a short-range spread.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/105"
+        },
+        {
+            "id": 106,
+            "name": "Hack",
+            "description": "Sombra hacks enemies to temporarily stop them from using their abilities, or hacks first aid kits to make them useless to her opponents.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/106"
+        },
+        {
+            "id": 107,
+            "name": "Thermoptic Camo",
+            "description": "Sombra becomes invisible for a short period of time, during which her speed is boosted considerably. Attacking, using offensive abilities, or taking damage disables her camouflage.",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/107"
+        },
+        {
+            "id": 108,
+            "name": "Translocator",
+            "description": "Sombra tosses out a translocator beacon. She can instantly return to the beacon\u2019s location while it is active (including when it\u2019s in mid-flight).",
+            "is_ultimate": false,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/108"
+        },
+        {
+            "id": 109,
+            "name": "EMP",
+            "description": "Sombra discharges electromagnetic energy in a wide radius, destroying enemy barriers and shields and hacking all opponents caught in the blast.",
+            "is_ultimate": true,
+            "url": "https:\/\/overwatch-api.net\/api\/v1\/ability\/109"
+        }
+    ]
+}
