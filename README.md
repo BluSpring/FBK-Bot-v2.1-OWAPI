@@ -32,3 +32,5 @@ If you want the latest updates of FoozBallKing Bot and the code, join this serve
 
 # Rules
 If you call this bot your own, that will be called lying. Don't ever call this bot your own.
+
+[![Discord Bots](https://discordbots.org/api/widget/292053219528671233.png)](https://discordbots.org/bot/292053219528671233)
